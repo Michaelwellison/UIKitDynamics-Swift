@@ -1,25 +1,246 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="AdP-Fy-YBd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dynamics Catalogue-->
+        <scene sceneID="GCp-kl-EsS">
+            <objects>
+                <viewController title="Dynamics Catalogue" id="9md-jV-9Vf" customClass="DynamicsCatalog" customModule="UIKitDynamicsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oHk-id-5pk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="y0z-KT-W0C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="42" id="0e3-Ss-8Lj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0e3-Ss-8Lj" id="hZe-SB-9s5">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dynamics Catalogue" id="dvc-eD-Y6T"/>
+                    <connections>
+                        <outlet property="tableView" destination="y0z-KT-W0C" id="nUk-ip-5K1"/>
+                        <segue destination="Wxg-U6-3cE" kind="push" identifier="AttachementsCollisionSegue" id="PjG-rH-glo"/>
+                        <segue destination="7GF-aN-voQ" kind="push" identifier="GravityCollisionSpringSegue" id="FuH-Vq-zHQ"/>
+                        <segue destination="bWz-iA-Q08" kind="push" identifier="SnapSegue" id="Mgf-AS-4w4"/>
+                        <segue destination="9q3-QC-t0x" kind="push" identifier="InstantaneousPushCollisionSegue" id="YHP-pZ-jiG"/>
+                        <segue destination="Sfz-bH-iNU" kind="push" identifier="ContinuousPushCollisionSegue" id="OaF-7i-O1V"/>
+                        <segue destination="eSO-GV-4AH" kind="push" identifier="PendulumSegue" id="GOI-vA-Z68"/>
+                        <segue destination="mAZ-X3-PXJ" kind="push" identifier="ItemPropertiesSegue" id="1oq-4B-syB"/>
+                        <segue destination="6yW-6s-hhN" kind="push" identifier="CustomDynamicItemSegue" id="qZw-Qs-ahR"/>
+                        <segue destination="mrH-dg-aNV" kind="push" identifier="GravitySegue" id="sEL-QE-Msq"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="GravityCollisionSegue" id="MRX-K3-tdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjf-bc-Huf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="248"/>
+        </scene>
+        <!--Instantaneous Push + Collision-->
+        <scene sceneID="nut-pF-8FH">
+            <objects>
+                <viewController title="Instantaneous Push + Collision" id="9q3-QC-t0x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKG-Nf-Kjj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qDx-n1-gTt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhd-uU-8jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="440"/>
+        </scene>
+        <!--Continuous Push + Collision-->
+        <scene sceneID="ega-gs-651">
+            <objects>
+                <viewController title="Continuous Push + Collision" id="Sfz-bH-iNU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gj9-d9-AB1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kw2-QQ-qR5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ju-78-G6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="440"/>
+        </scene>
+        <!--Pendulum (Composite Behavior)-->
+        <scene sceneID="rAz-SW-bgW">
+            <objects>
+                <viewController title="Pendulum (Composite Behavior)" id="eSO-GV-4AH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08u-GG-YN5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CYx-aN-T6z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNl-Fc-sLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="440"/>
+        </scene>
+        <!--Item Properties-->
+        <scene sceneID="OwM-Kq-Izv">
+            <objects>
+                <viewController title="Item Properties" id="mAZ-X3-PXJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6H-s1-RbB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3oq-b4-w5u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2AB-os-saa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608" y="440"/>
+        </scene>
+        <!--Custom Dynamic Item-->
+        <scene sceneID="tJ5-uV-G09">
+            <objects>
+                <viewController title="Custom Dynamic Item" id="6yW-6s-hhN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="voR-uV-rPb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sqB-8g-Nxe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9f-0g-E7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="440"/>
+        </scene>
+        <!--Gravity + Collision-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
+                <viewController title="Gravity + Collision" id="vXZ-lx-hvc" customClass="GravityCollisionViewController" customModule="UIKitDynamicsSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box1" id="zS5-ai-izL">
+                                <rect key="frame" x="135" y="161" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ybF-G1-uI6"/>
+                    <connections>
+                        <outlet property="box1" destination="zS5-ai-izL" id="IMq-S9-Hnt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="885" y="-209"/>
+        </scene>
+        <!--Gravity-->
+        <scene sceneID="6eV-Zq-tnV">
+            <objects>
+                <viewController title="Gravity" id="mrH-dg-aNV" customClass="GravityViewController" customModule="UIKitDynamicsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hrD-rm-j75">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Box1" id="lbW-pg-EKd">
+                                <rect key="frame" x="135" y="156" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Pd-Ug-0tB"/>
+                    <connections>
+                        <outlet property="box1" destination="lbW-pg-EKd" id="XJu-D0-NRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7O-3h-dzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="-209"/>
+        </scene>
+        <!--Attachements + Collision-->
+        <scene sceneID="ha6-7H-Qi9">
+            <objects>
+                <viewController title="Attachements + Collision" id="Wxg-U6-3cE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EeM-zY-0cW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QLS-cS-qzw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFo-WJ-VTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="-209"/>
+        </scene>
+        <!--Collision + Gravity + Spring-->
+        <scene sceneID="tu5-Ec-367">
+            <objects>
+                <viewController title="Collision + Gravity + Spring" id="7GF-aN-voQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3vU-IJ-V9C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tdF-17-edP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5JO-aG-9l4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608" y="-209"/>
+        </scene>
+        <!--Snap-->
+        <scene sceneID="wzp-vj-LUG">
+            <objects>
+                <viewController title="Snap" id="bWz-iA-Q08" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kbk-0q-SdF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B49-qb-pz3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29a-oZ-KF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="-209"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Pt-NR-hkC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AdP-Fy-YBd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5E1-XQ-pBS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9md-jV-9Vf" kind="relationship" relationship="rootViewController" id="X1n-YT-bSj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqV-8i-02Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="248"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Box1" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1336B2771A17ABAB00060E73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1336B2761A17ABAB00060E73 /* QuartzCore.framework */; };
+		1341C6F61A1D10CA00F7CD98 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341C6F51A1D10CA00F7CD98 /* GravityViewController.swift */; };
+		1377B6421A1A647C0054C6BD /* DynamicsCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377B6411A1A647C0054C6BD /* DynamicsCatalog.swift */; };
 		13FAA46D1A17A34F002FDDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAA46C1A17A34F002FDDA8 /* AppDelegate.swift */; };
-		13FAA46F1A17A34F002FDDA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAA46E1A17A34F002FDDA8 /* ViewController.swift */; };
+		13FAA46F1A17A34F002FDDA8 /* GravityCollisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAA46E1A17A34F002FDDA8 /* GravityCollisionViewController.swift */; };
 		13FAA4721A17A34F002FDDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FAA4701A17A34F002FDDA8 /* Main.storyboard */; };
 		13FAA4741A17A34F002FDDA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13FAA4731A17A34F002FDDA8 /* Images.xcassets */; };
 		13FAA4771A17A34F002FDDA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13FAA4751A17A34F002FDDA8 /* LaunchScreen.xib */; };
@@ -26,10 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1336B2761A17ABAB00060E73 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1341C6F51A1D10CA00F7CD98 /* GravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
+		1377B6411A1A647C0054C6BD /* DynamicsCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicsCatalog.swift; sourceTree = "<group>"; };
 		13FAA4671A17A34F002FDDA8 /* UIKitDynamicsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDynamicsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FAA46B1A17A34F002FDDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13FAA46C1A17A34F002FDDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13FAA46E1A17A34F002FDDA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13FAA46E1A17A34F002FDDA8 /* GravityCollisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityCollisionViewController.swift; sourceTree = "<group>"; };
 		13FAA4711A17A34F002FDDA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13FAA4731A17A34F002FDDA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		13FAA4761A17A34F002FDDA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1336B2771A17ABAB00060E73 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,11 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1341C6F71A1D11CD00F7CD98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1336B2761A17ABAB00060E73 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		13FAA45E1A17A34F002FDDA8 = {
 			isa = PBXGroup;
 			children = (
 				13FAA4691A17A34F002FDDA8 /* UIKitDynamicsSwift */,
 				13FAA47F1A17A34F002FDDA8 /* UIKitDynamicsSwiftTests */,
+				1341C6F71A1D11CD00F7CD98 /* Frameworks */,
 				13FAA4681A17A34F002FDDA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,9 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				13FAA46C1A17A34F002FDDA8 /* AppDelegate.swift */,
-				13FAA46E1A17A34F002FDDA8 /* ViewController.swift */,
-				13FAA4701A17A34F002FDDA8 /* Main.storyboard */,
+				1341C6F51A1D10CA00F7CD98 /* GravityViewController.swift */,
+				13FAA46E1A17A34F002FDDA8 /* GravityCollisionViewController.swift */,
+				1377B6411A1A647C0054C6BD /* DynamicsCatalog.swift */,
 				13FAA4731A17A34F002FDDA8 /* Images.xcassets */,
+				13FAA4701A17A34F002FDDA8 /* Main.storyboard */,
 				13FAA4751A17A34F002FDDA8 /* LaunchScreen.xib */,
 				13FAA46A1A17A34F002FDDA8 /* Supporting Files */,
 			);
@@ -212,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13FAA46F1A17A34F002FDDA8 /* ViewController.swift in Sources */,
+				13FAA46F1A17A34F002FDDA8 /* GravityCollisionViewController.swift in Sources */,
+				1377B6421A1A647C0054C6BD /* DynamicsCatalog.swift in Sources */,
 				13FAA46D1A17A34F002FDDA8 /* AppDelegate.swift in Sources */,
+				1341C6F61A1D10CA00F7CD98 /* GravityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +425,7 @@
 				13FAA4881A17A34F002FDDA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13FAA4891A17A34F002FDDA8 /* Build configuration list for PBXNativeTarget "UIKitDynamicsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				13FAA48B1A17A34F002FDDA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
