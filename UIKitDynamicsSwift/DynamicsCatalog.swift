@@ -55,7 +55,7 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
             performSegueWithIdentifier("GravityCollisionSegue", sender: self)
             println("still need to create view")
         case 2:
-            performSegueWithIdentifier("AttachementsCollisionSegue", sender: self)
+            performSegueWithIdentifier("AttachmentsCollisionSegue", sender: self)
             println("still need to create view")
         case 3:
             performSegueWithIdentifier("GravityCollisionSpringSegue", sender: self)
