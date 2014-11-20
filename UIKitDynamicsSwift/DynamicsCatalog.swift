@@ -53,31 +53,22 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
             performSegueWithIdentifier("GravitySegue", sender: self)
         case 1:
             performSegueWithIdentifier("GravityCollisionSegue", sender: self)
-            println("still need to create view")
         case 2:
             performSegueWithIdentifier("AttachmentsCollisionSegue", sender: self)
-            println("still need to create view")
         case 3:
             performSegueWithIdentifier("GravityCollisionSpringSegue", sender: self)
-            println("still need to create view")
         case 4:
             performSegueWithIdentifier("SnapSegue", sender: self)
-            println("still need to create view")
         case 5:
             performSegueWithIdentifier("InstantaneousPushCollisionSegue", sender: self)
-            println("still need to create view")
         case 6:
             performSegueWithIdentifier("ContinuousPushCollisionSegue", sender: self)
-            println("still need to create view")
         case 7:
             performSegueWithIdentifier("PendulumSegue", sender: self)
-            println("still need to create view")
         case 8:
             performSegueWithIdentifier("ItemPropertiesSegue", sender: self)
-            println("still need to create view")
         case 9:
             performSegueWithIdentifier("CustomDynamicItemSegue", sender: self)
-            println("still need to create view")
         default:
             println("something went wrong")
         }

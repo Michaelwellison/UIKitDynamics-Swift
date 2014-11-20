@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GravityCollisionViewController: UIViewController {
+class GravityCollisionViewController: UIViewController, UICollisionBehaviorDelegate {
 
     // MARK: Outlets
     @IBOutlet weak var box1: UIImageView!
@@ -20,6 +20,10 @@ class GravityCollisionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.box1.image = self.box1.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        self.box1.tintColor = UIColor.darkGrayColor();
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -37,13 +41,27 @@ class GravityCollisionViewController: UIViewController {
         animator.addBehavior(gravityBehavior)
         
         self.animator = animator
-        
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: Collision Behavior Delegate
+    
+    // This method is called when square1 begins contacting a collision boundary.
+    // In this demo, the only collision boundary is the bounds of the reference
+    // view (self.view).
+    
+    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying, atPoint p: CGPoint) {
+        
+        // Lighten the tint color when the view is in contact with a boundary.
+        (item as UIView).tintColor = UIColor.lightGrayColor()
+    }
+    
+    //  This method is called when square1 stops contacting a collision boundary.
+    //  In this demo, the only collision boundary is the bounds of the reference
+    //  view (self.view).
+    
+    func collisionBehavior(behavior: UICollisionBehavior!, endedContactForItem item: UIDynamicItem!, withBoundaryIdentifier identifier: NSCopying!) {
+        // Restore the default color when ending a contact.
+        (item as UIView).tintColor = UIColor.darkGrayColor()
     }
     
     // MARK: Actions
