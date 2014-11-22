@@ -9,6 +9,7 @@
 import UIKit
 
 class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    // MARK: Properties
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cellLabel: UILabel!
@@ -17,6 +18,7 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
     let catalogueSegues = ["GravitySegue", "GravityCollisionSegue", "AttachmentsCollisionSegue", "GravityCollisionSpringSegue", "SnapSegue", "InstantaneousPushCollisionSegue", "ContinuousPushCollisionSegue", "PendulumSegue", "ItemPropertiesSegue", "CustomDynamicItemSegue"]
     
     // MARK: View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,7 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     // MARK: Table View Data Source
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
         
@@ -39,6 +42,7 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     // MARK: Table View Delegate
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellLabels.count
     }

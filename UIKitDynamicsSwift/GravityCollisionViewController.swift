@@ -9,13 +9,13 @@
 import UIKit
 
 class GravityCollisionViewController: UIViewController, UICollisionBehaviorDelegate {
-
-    // MARK: Outlets
+    // MARK: Properties
+    
     @IBOutlet weak var box1: UIImageView!
     
-    // MARK: Variables
     var animator : UIDynamicAnimator!
 
+    // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,6 @@ class GravityCollisionViewController: UIViewController, UICollisionBehaviorDeleg
         // by adjusting the tintColor of the UIImageView displaying it.
         self.box1.image = self.box1.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         self.box1.tintColor = UIColor.darkGrayColor();
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -32,10 +31,10 @@ class GravityCollisionViewController: UIViewController, UICollisionBehaviorDeleg
     }
     
     func makeGravity() {
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        let animator = UIDynamicAnimator(referenceView: self.view)
         
-        let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items:[self.box1]);
-        let collisionBehavior:UICollisionBehavior = UICollisionBehavior(items:[self.box1])
+        let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items:[box1]);
+        let collisionBehavior:UICollisionBehavior = UICollisionBehavior(items:[box1])
         
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true;
         animator.addBehavior(collisionBehavior)

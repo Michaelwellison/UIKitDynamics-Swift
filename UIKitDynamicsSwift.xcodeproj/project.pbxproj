@@ -10,6 +10,7 @@
 		1336B2771A17ABAB00060E73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1336B2761A17ABAB00060E73 /* QuartzCore.framework */; };
 		1341C6F61A1D10CA00F7CD98 /* GravityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341C6F51A1D10CA00F7CD98 /* GravityViewController.swift */; };
 		1377B6421A1A647C0054C6BD /* DynamicsCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1377B6411A1A647C0054C6BD /* DynamicsCatalog.swift */; };
+		139C1D601A2114B500B4868C /* AttachmentsCollisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C1D5F1A2114B500B4868C /* AttachmentsCollisionViewController.swift */; };
 		13FAA46D1A17A34F002FDDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAA46C1A17A34F002FDDA8 /* AppDelegate.swift */; };
 		13FAA46F1A17A34F002FDDA8 /* GravityCollisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAA46E1A17A34F002FDDA8 /* GravityCollisionViewController.swift */; };
 		13FAA4721A17A34F002FDDA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FAA4701A17A34F002FDDA8 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		1336B2761A17ABAB00060E73 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1341C6F51A1D10CA00F7CD98 /* GravityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityViewController.swift; sourceTree = "<group>"; };
 		1377B6411A1A647C0054C6BD /* DynamicsCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicsCatalog.swift; sourceTree = "<group>"; };
+		139C1D5F1A2114B500B4868C /* AttachmentsCollisionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentsCollisionViewController.swift; sourceTree = "<group>"; };
 		13FAA4671A17A34F002FDDA8 /* UIKitDynamicsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDynamicsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FAA46B1A17A34F002FDDA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13FAA46C1A17A34F002FDDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				13FAA46C1A17A34F002FDDA8 /* AppDelegate.swift */,
 				1341C6F51A1D10CA00F7CD98 /* GravityViewController.swift */,
 				13FAA46E1A17A34F002FDDA8 /* GravityCollisionViewController.swift */,
+				139C1D5F1A2114B500B4868C /* AttachmentsCollisionViewController.swift */,
 				1377B6411A1A647C0054C6BD /* DynamicsCatalog.swift */,
 				13FAA4731A17A34F002FDDA8 /* Images.xcassets */,
 				13FAA4701A17A34F002FDDA8 /* Main.storyboard */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139C1D601A2114B500B4868C /* AttachmentsCollisionViewController.swift in Sources */,
 				13FAA46F1A17A34F002FDDA8 /* GravityCollisionViewController.swift in Sources */,
 				1377B6421A1A647C0054C6BD /* DynamicsCatalog.swift in Sources */,
 				13FAA46D1A17A34F002FDDA8 /* AppDelegate.swift in Sources */,

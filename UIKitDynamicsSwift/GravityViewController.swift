@@ -23,7 +23,7 @@ class GravityViewController: UIViewController {
     }
     
     func makeGravity() {
-        let animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        let animator = UIDynamicAnimator(referenceView: self.view)
         
         let gravityBehavior:UIGravityBehavior = UIGravityBehavior(items:[self.box1]);
         
