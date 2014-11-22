@@ -19,11 +19,12 @@ class GravityCollisionViewController: UIViewController, UICollisionBehaviorDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+
+        // Make the square a template image so its color can be changed
+        // by adjusting the tintColor of the UIImageView displaying it.
         self.box1.image = self.box1.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        
         self.box1.tintColor = UIColor.darkGrayColor();
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -39,6 +40,7 @@ class GravityCollisionViewController: UIViewController, UICollisionBehaviorDeleg
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true;
         animator.addBehavior(collisionBehavior)
         animator.addBehavior(gravityBehavior)
+        collisionBehavior.collisionDelegate = self
         
         self.animator = animator
     }
@@ -60,13 +62,9 @@ class GravityCollisionViewController: UIViewController, UICollisionBehaviorDeleg
     //  view (self.view).
     
     func collisionBehavior(behavior: UICollisionBehavior!, endedContactForItem item: UIDynamicItem!, withBoundaryIdentifier identifier: NSCopying!) {
+        
         // Restore the default color when ending a contact.
         (item as UIView).tintColor = UIColor.darkGrayColor()
-    }
-    
-    // MARK: Actions
-
-    @IBAction func tapGravityOn(sender: AnyObject) {
     }
 }
 

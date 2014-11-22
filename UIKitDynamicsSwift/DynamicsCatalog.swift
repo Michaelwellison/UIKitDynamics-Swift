@@ -11,11 +11,12 @@ import UIKit
 class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
     @IBOutlet weak var cellLabel: UILabel!
     
-    var cellLabels = ["Gravity", "Gravity + Collision", "Attachments + Collision", "Collision + Gravity + Spring", "Snap", "Instantaneous Push + Collision", "Continuous Push + Collision", "Pendulum (Composite Behavior", "Item Properties", "Custom Dymanic Item"]
+    let cellLabels = ["Gravity", "Gravity + Collision", "Attachments + Collision", "Collision + Gravity + Spring", "Snap", "Instantaneous Push + Collision", "Continuous Push + Collision", "Pendulum (Composite Behavior", "Item Properties", "Custom Dymanic Item"]
+    let catalogueSegues = ["GravitySegue", "GravityCollisionSegue", "AttachmentsCollisionSegue", "GravityCollisionSpringSegue", "SnapSegue", "InstantaneousPushCollisionSegue", "ContinuousPushCollisionSegue", "PendulumSegue", "ItemPropertiesSegue", "CustomDynamicItemSegue"]
     
+    // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +29,7 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    // Table View Data Source
+    // MARK: Table View Data Source
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
         
@@ -37,41 +38,18 @@ class DynamicsCatalog: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
-    // Table View Delegate
+    // MARK: Table View Delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellLabels.count
     }
-    
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 44
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.row {
-            case 0:
-            performSegueWithIdentifier("GravitySegue", sender: self)
-        case 1:
-            performSegueWithIdentifier("GravityCollisionSegue", sender: self)
-        case 2:
-            performSegueWithIdentifier("AttachmentsCollisionSegue", sender: self)
-        case 3:
-            performSegueWithIdentifier("GravityCollisionSpringSegue", sender: self)
-        case 4:
-            performSegueWithIdentifier("SnapSegue", sender: self)
-        case 5:
-            performSegueWithIdentifier("InstantaneousPushCollisionSegue", sender: self)
-        case 6:
-            performSegueWithIdentifier("ContinuousPushCollisionSegue", sender: self)
-        case 7:
-            performSegueWithIdentifier("PendulumSegue", sender: self)
-        case 8:
-            performSegueWithIdentifier("ItemPropertiesSegue", sender: self)
-        case 9:
-            performSegueWithIdentifier("CustomDynamicItemSegue", sender: self)
-        default:
-            println("something went wrong")
-        }
+
+        performSegueWithIdentifier(catalogueSegues[indexPath.row], sender: self)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
